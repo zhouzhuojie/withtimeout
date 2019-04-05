@@ -1,11 +1,9 @@
-// package withtimeout provides functionality for performing operations with
+// Package withtimeout provides functionality for performing operations with
 // a timeout.
 package withtimeout
 
 import (
 	"time"
-
-	"github.com/getlantern/ops"
 )
 
 const (
@@ -22,10 +20,10 @@ func (timeoutError) Error() string { return timeoutErrorString }
 func Do(timeout time.Duration, fn func() (interface{}, error)) (result interface{}, timedOut bool, err error) {
 	resultCh := make(chan *resultWithError, 1)
 
-	ops.Go(func() {
+	go func() {
 		result, err := fn()
 		resultCh <- &resultWithError{result, err}
-	})
+	}()
 
 	select {
 	case <-time.After(timeout):
