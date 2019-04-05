@@ -1,12 +1,9 @@
-withtimeout [![Travis CI Status](https://travis-ci.org/getlantern/withtimeout.svg?branch=master)](https://travis-ci.org/getlantern/withtimeout)&nbsp;[![Coverage Status](https://coveralls.io/repos/getlantern/withtimeout/badge.png)](https://coveralls.io/r/getlantern/withtimeout)&nbsp;[![GoDoc](https://godoc.org/github.com/getlantern/withtimeout?status.png)](http://godoc.org/github.com/getlantern/withtimeout)
+withtimeout [![GoDoc](https://godoc.org/github.com/zhouzhuojie/withtimeout?status.png)](http://godoc.org/github.com/zhouzhuojie/withtimeout)
 ==========
-withtimeout provides a Golang package that allows adding a timeout to any
-operation.
+`withtimeout` provides a Golang package that allows adding a timeout to any operation. It's based on `github.com/getlantern/withtimeout` with plain old goroutine, thus no extra dependencies.
 
 To install:
-
-`go get github.com/getlantern/withtimeout`
+`go get github.com/zhouzhuojie/withtimeout`
 
 For docs:
-
-`godoc github.com/getlantern/withtimeout`
+`godoc github.com/zhouzhuojie/withtimeout`
